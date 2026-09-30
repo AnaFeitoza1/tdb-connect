@@ -1,11 +1,10 @@
-/* ==========================================
-   CARREGAMENTO DAS FONTES LOCAIS (@font-face)
-   ========================================== */
+/* CARREGAMENTO DAS FONTES LOCAIS (@font-face) */
 @font-face {
   font-family: 'Glacial Indifference';
   src: url('../fonts/GlacialIndifference-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -13,7 +12,9 @@
   src: url('../fonts/Lovelo-Line.otf') format('opentype');
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
+
 :root {
  /* Cores Principais */
  --cor-fundo: #bea1f7;
