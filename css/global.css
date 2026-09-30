@@ -1,0 +1,11 @@
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: var(--fonte-corpo);
+  font-size: var(--tamanho-corpo);
+}
+
+h1 {
+  font-family: var(--fonte-titulo);
+  font-size: var(--tamanho-titulo);
+}
