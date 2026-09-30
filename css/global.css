@@ -1,3 +1,19 @@
+/* CARREGAMENTO DAS FONTES LOCAIS (@font-face) */
+@font-face {
+  font-family: 'Glacial Indifference';
+  src: url('../fonts/GlacialIndifference-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lovelo Line';
+  src: url('../fonts/Lovelo\ Line\ Light\ 300.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
 body {
   background-color: var(--cor-fundo);
   color: var(--cor-texto);
@@ -8,4 +24,112 @@ body {
 h1 {
   font-family: var(--fonte-titulo);
   font-size: var(--tamanho-titulo);
+}
+/* ==========================================
+   Estilos compartilhados entre todas as páginas
+   (usa as variáveis definidas em variaveis.css)
+   ========================================== */
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: var(--fonte-corpo);
+  font-size: var(--tamanho-corpo);
+}
+
+h1 {
+  font-family: var(--fonte-titulo);
+  font-size: var(--tamanho-titulo);
+}
+
+/* ---------- Margens laterais padrão ---------- */
+.header,
+.footer {
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+/* ---------- Menu ---------- */
+.header {
+  padding-top: var(--espaco-m);
+  padding-bottom: var(--espaco-m);
+}
+
+.menu ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--espaco-g);
+  list-style: none;
+}
+
+.menu a {
+  display: block;
+  padding: var(--espaco-p) var(--espaco-m);
+  background-color: var(--cor-destaque);
+  color: var(--cor-texto-claro);
+  font-family: var(--fonte-subtitulo);
+  font-size: var(--tamanho-subtitulo);
+  text-align: center;
+  text-decoration: none;
+  border-radius: var(--border-radius-botao);
+}
+
+.menu a:hover {
+  background-color: var(--cor-destaque-hover);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  flex: 1; /* ocupa o espaço livre entre o menu e o rodapé */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 64px;
+}
+
+.hero__texto {
+  color: var(--cor-texto-claro); /* título em branco */
+}
+
+.hero__texto h1 {
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+.hero__texto p {
+  margin-top: var(--espaco-m);
+  font-family: var(--fonte-corpo);
+  font-size: var(--tamanho-corpo);
+  color: var(--cor-texto); /* subtítulo em azul */
+}
+
+.hero__imagem {
+  max-width: 500px;
+  max-height: 60vh;
+  object-fit: contain;
+}
+
+/* ---------- Rodapé ---------- */
+.footer {
+  padding-top: var(--espaco-p);
+  padding-bottom: var(--espaco-p);
+  text-align: right;
+  text-transform: uppercase;
+  color: var(--cor-texto-claro);
+  font-family: var(--fonte-parceria);
+  font-size: var(--tamanho-parceria);
+  font-weight: bold;
+  text-shadow: 0 0 6px var(--cor-destaque); /* ajuda a ler a fonte fina */
 }

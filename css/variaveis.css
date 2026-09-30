@@ -1,20 +1,3 @@
-/* CARREGAMENTO DAS FONTES LOCAIS (@font-face) */
-@font-face {
-  font-family: 'Glacial Indifference';
-  src: url('../fonts/GlacialIndifference-Regular.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Lovelo Line';
-  src: url('../fonts/Lovelo-Line.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root {
  /* Cores Principais */
  --cor-fundo: #bea1f7;
@@ -29,15 +12,15 @@
  --fonte-corpo: "glacial indifference", sans-serif;
  --fonte-parceria: "lovelo line", sans-serif;
  /*Tamanhos de Fonte*/
- --tamanho-titulo: 90px;
- --tamanho-subtitulo: 29px;
- --tamanho-corpo: 21px;
+ --tamanho-titulo: 122px;
+ --tamanho-subtitulo: 25px;
+ --tamanho-corpo: 16px;
  --tamanho-parceria: 23px;
  /* Arredondamento e Espaçamentos */
- --border-radius-botao: 20px;
- --espaco-p: 8px;
+ --border-radius-botao: 25px;
+ --espaco-p: 3px;
  --espaco-m: 16px;
- --espaco-g: 32px;
+ --espaco-g: 19px;
  --largura-max: 1200px;
 }
 
