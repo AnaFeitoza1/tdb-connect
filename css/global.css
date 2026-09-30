@@ -25,10 +25,6 @@ h1 {
   font-family: var(--fonte-titulo);
   font-size: var(--tamanho-titulo);
 }
-/* ==========================================
-   Estilos compartilhados entre todas as páginas
-   (usa as variáveis definidas em variaveis.css)
-   ========================================== */
 
 /* ---------- Base ---------- */
 *,
@@ -65,6 +61,8 @@ h1 {
 .header {
   padding-top: var(--espaco-m);
   padding-bottom: var(--espaco-m);
+  position: relative;
+  z-index: 10;
 }
 
 .menu ul {
@@ -111,17 +109,27 @@ h1 {
 .hero__texto p {
   margin-top: var(--espaco-m);
   font-family: var(--fonte-corpo);
-  font-size: var(--tamanho-corpo);
-  color: var(--cor-texto); /* subtítulo em azul */
+  font-size: var(--tamanho-subtitulo);   /* era o tamanho do corpo (21px), agora 29px */
+  color: var(--cor-texto);
 }
 
-.hero__imagem {
-  max-width: 500px;
-  max-height: 60vh;
+.hero__imagem { 
+  height: 75vh;
+  width: auto;
+  max-width: none;            /* tira o limite que segurava o tamanho */
+  flex-shrink: 0;
   object-fit: contain;
-}
+  margin-right: 40px;         /* folga para a imagem ampliada não sair da tela */
+  transform: scale(1.4);      /* aumenta só visualmente, sem empurrar o rodapé */
+  transform-origin: center;
+  /* ...o que já existe... */
+  filter: drop-shadow(0 30px 25px rgba(0, 0, 0, 0.35));
+  pointer-events: none;
+  }
 
-/* ---------- Rodapé ---------- */
+
+
+/* ---------- FIAP-TURMA DO BEM ---------- */
 .footer {
   padding-top: var(--espaco-p);
   padding-bottom: var(--espaco-p);
