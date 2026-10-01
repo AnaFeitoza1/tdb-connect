@@ -1,0 +1,78 @@
+/* ==========================================
+   PAGES.CSS - estilos específicos de cada página
+   ========================================== */
+
+/* ---------- Página de integrantes ---------- */
+
+/* Título só para leitores de tela (mantém o h1 semântico sem aparecer) */
+.visualmente-oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.conteudo {
+  flex: 1;
+  padding: var(--espaco-g) 64px;
+}
+
+/* Lista vertical: um integrante embaixo do outro */
+.integrantes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-g);
+}
+
+/* Cada linha: foto | dados | QR LinkedIn | QR GitHub */
+.integrante {
+  display: grid;
+  grid-template-columns: 180px 1fr 200px 200px;
+  align-items: center;
+  gap: var(--espaco-g);
+}
+
+.integrante__foto {
+  display: block;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.integrante__info h2 {
+  font-family: var(--fonte-corpo);
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.integrante__info p {
+  margin-top: var(--espaco-p);
+}
+
+/* QR code clicável: funciona como botão para o perfil */
+.integrante__qr {
+  display: flex;
+  justify-content: center;
+}
+
+.integrante__qr a {
+  display: block;
+  padding: var(--espaco-p);
+  background-color: var(--cor-texto-claro);
+  border-radius: var(--border-radius-botao);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.integrante__qr a:hover,
+.integrante__qr a:focus-visible {
+  transform: scale(1.06);
+  box-shadow: 0 6px 16px rgba(16, 50, 88, 0.35);
+}
+
+.integrante__qr img {
+  display: block;
+  width: 140px;
+  height: 140px;
+}
