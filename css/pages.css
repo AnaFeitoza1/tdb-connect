@@ -19,6 +19,15 @@
   padding: var(--espaco-g) 64px;
 }
 
+.titulo-integrantes {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #0d2c4c; /* Cor similar aos botões do menu */
+  font-size: 4rem;
+  font-weight: bold;
+}
+
 /* Lista vertical: um integrante embaixo do outro */
 .integrantes {
   display: flex;

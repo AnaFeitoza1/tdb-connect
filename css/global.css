@@ -113,19 +113,36 @@ h1 {
   color: var(--cor-texto);
 }
 
-.hero__imagem { 
-  height: 75vh;
-  width: auto;
-  max-width: none;            /* tira o limite que segurava o tamanho */
+/* Caixa da colagem: define o tamanho do conjunto */
+.hero__figura {
+  position: relative;
   flex-shrink: 0;
-  object-fit: contain;
-  margin-right: 40px;         /* folga para a imagem ampliada não sair da tela */
-  transform: scale(1.4);      /* aumenta só visualmente, sem empurrar o rodapé */
-  transform-origin: center;
-  /* ...o que já existe... */
-  filter: drop-shadow(0 30px 25px rgba(0, 0, 0, 0.35));
-  pointer-events: none;
-  }
+  height: 60vh;
+  aspect-ratio: 1.31 / 1;    /* proporção da colagem no seu print */
+  max-width: 48vw;
+  margin-right: -64px;       /* encosta a colagem na borda direita da tela */
+}
+
+/* Colagem de fotos ao fundo */
+.hero__fotos {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;              /* deixa as fotos "lavadas" pelo lilás, como no Canva */
+}
+
+/* Dente por cima */
+.hero__imagem {
+  position: absolute;
+  left: 45%;
+  top: 55%;
+  height: 145%;
+  width: auto;
+  max-width: none;
+  transform: translate(-50%, -50%);
+}
 
 
 
