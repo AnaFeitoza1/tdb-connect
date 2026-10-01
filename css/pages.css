@@ -29,26 +29,28 @@
 /* Cada linha: foto | dados | QR LinkedIn | QR GitHub */
 .integrante {
   display: grid;
-  grid-template-columns: 180px 1fr 200px 200px;
+  grid-template-columns: 200px minmax(280px, 440px) 200px 200px;
   align-items: center;
   gap: var(--espaco-g);
+  justify-content: center;
 }
 
 .integrante__foto {
   display: block;
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
 }
 
 .integrante__info h2 {
   font-family: var(--fonte-corpo);
-  font-size: 24px;
+  font-size: 30px;
   font-weight: normal;
 }
 
 .integrante__info p {
   margin-top: var(--espaco-p);
+  font-size: 24px;
 }
 
 /* QR code clicável: funciona como botão para o perfil */
@@ -73,6 +75,6 @@
 
 .integrante__qr img {
   display: block;
-  width: 140px;
-  height: 140px;
+  width: 168px;
+  height: 168px;
 }
