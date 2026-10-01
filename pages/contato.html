@@ -16,4 +16,47 @@
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/pages.css">
   </head>
+  <body>
+   <nav class="menu" aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="duvidas.html">Dúvidas</a>
+      <a href="contato.html" aria-current="page">Contato</a>
+   </nav>
+   <main>
+     <h1>Fale com a gente</h1>
+     <p class="lead">Seja para doar, firmar uma parceria ou se voluntariar, estamos prontos para ouvir você.</p>
+     <div class="contato-layout"></div>
+     <section class="card">
+        <form action="mailto:contato@seudominio.org.br" method="post" enctype="text/plain">
+          <div class="campo"><label for="nome">Nome</label><input id="nome" name="nome" autocomplete="name" required minlength="3"></div>
+          <div class="campo"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          <div class="campo"><label for="perfil">Tipo de perfil</label>
+          <select id="perfil" name="perfil" required><option value="">Selecione</option><option>Doador</option><option>Parceiro</option><option>Voluntário</option><option>Outro</option></select></div>
+          <div class="campo"><label for="assunto">Assunto</label><input id="assunto" name="assunto" required minlength="3"></div>
+          <div class="campo"><label for="mensagem">Mensagem</label><textarea id="mensagem" name="mensagem" required minlength="10"></textarea></div>
+          <button class="btn" type="submit">Enviar mensagem</button>
+        </form>
+     </section>
+     <aside style="display:grid;gap:18px;align-content:start"></aside>
+     <section class="card">
+        <h3>Contato direto</h3>
+        <ul class="canais">
+          <li>Suporte: <a href="mailto:suporte@seudominio.org.br">suporte@seudominio.org.br</a></li>
+          <li>Parcerias: <a href="mailto:parcerias@seudominio.org.br">parcerias@seudominio.org.br</a></li>
+        </ul>
+     </section>
+     <section class="card">
+        <h3>Redes sociais</h3>
+        <div class="redes"><a href="#">Instagram</a><a href="#">LinkedIn</a><a href="#">Facebook</a><a href="#">YouTube</a></div>
+     </section>
+     <section class="card destaque">
+        <h3>Prefere conversar agora?</h3>
+        <p style="margin-bottom:14px">O Assistente Virtual responde dúvidas a qualquer hora.</p>
+        <a class="btn btn-claro" href="index.html#chatbot">Falar com o Assistente</a>
+     </section>
+     </aside>
+   </main>
+   <footer>© Turma do Bem · TdB Connect. Plataforma de gestão, relacionamento e inteligência de dados.</footer>
+  </body>
 </html>
