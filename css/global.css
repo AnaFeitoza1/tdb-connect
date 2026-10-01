@@ -1,4 +1,10 @@
-/* CARREGAMENTO DAS FONTES LOCAIS (@font-face) */
+/* ==========================================
+   GLOBAL.CSS - TdB Connect
+   Estilos compartilhados entre todas as páginas
+   (usa as variáveis definidas em variaveis.css)
+   ========================================== */
+
+/* ---------- Fontes locais (@font-face) ---------- */
 @font-face {
   font-family: 'Glacial Indifference';
   src: url('../fonts/GlacialIndifference-Regular.otf') format('opentype');
@@ -14,17 +20,6 @@
   font-style: normal;
   font-display: swap;
 }
-body {
-  background-color: var(--cor-fundo);
-  color: var(--cor-texto);
-  font-family: var(--fonte-corpo);
-  font-size: var(--tamanho-corpo);
-}
-
-h1 {
-  font-family: var(--fonte-titulo);
-  font-size: var(--tamanho-titulo);
-}
 
 /* ---------- Base ---------- */
 *,
@@ -36,9 +31,10 @@ h1 {
 }
 
 body {
-  min-height: 100vh;
+  min-height: 100vh;          /* cresce se o conteúdo for maior que a tela */
   display: flex;
-  flex-direction: column;
+  flex-direction: column;     /* menu em cima, conteúdo no meio, rodapé embaixo */
+  overflow-x: hidden;         /* evita rolagem lateral indesejada */
   background-color: var(--cor-fundo);
   color: var(--cor-texto);
   font-family: var(--fonte-corpo);
@@ -50,19 +46,11 @@ h1 {
   font-size: var(--tamanho-titulo);
 }
 
-/* ---------- Margens laterais padrão ---------- */
-.header,
-.footer {
-  padding-left: 64px;
-  padding-right: 64px;
-}
-
-/* ---------- Menu ---------- */
+/* ---------- Cabeçalho e menu ---------- */
 .header {
-  padding-top: var(--espaco-m);
-  padding-bottom: var(--espaco-m);
   position: relative;
-  z-index: 10;
+  z-index: 10;                /* fica acima das fotos de fundo */
+  padding: var(--espaco-m) 64px;
 }
 
 .menu ul {
@@ -88,73 +76,73 @@ h1 {
   background-color: var(--cor-destaque-hover);
 }
 
-/* ---------- Hero ---------- */
-.hero {
-  flex: 1; /* ocupa o espaço livre entre o menu e o rodapé */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 64px;
-}
-
-.hero__texto {
-  color: var(--cor-texto-claro); /* título em branco */
-}
-
-.hero__texto h1 {
-  font-weight: normal;
-  line-height: 1.1;
-}
-
-.hero__texto p {
-  margin-top: var(--espaco-m);
-  font-family: var(--fonte-corpo);
-  font-size: var(--tamanho-subtitulo);   /* era o tamanho do corpo (21px), agora 29px */
-  color: var(--cor-texto);
-}
-
-/* Caixa da colagem: define o tamanho do conjunto */
-.hero__figura {
-  position: relative;
-  flex-shrink: 0;
-  height: 60vh;
-  aspect-ratio: 1.31 / 1;    /* proporção da colagem no seu print */
-  max-width: 48vw;
-  margin-right: -64px;       /* encosta a colagem na borda direita da tela */
-}
-
-/* Colagem de fotos ao fundo */
-.hero__fotos {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.7;              /* deixa as fotos "lavadas" pelo lilás, como no Canva */
-}
-
-/* Dente por cima */
-.hero__imagem {
-  position: absolute;
-  left: 45%;
-  top: 55%;
-  height: 145%;
-  width: auto;
-  max-width: none;
-  transform: translate(-50%, -50%);
-}
-
-
-
-/* ---------- FIAP-TURMA DO BEM ---------- */
+/* ---------- Rodapé ---------- */
 .footer {
-  padding-top: var(--espaco-p);
-  padding-bottom: var(--espaco-p);
-  text-align: right;
+  position: relative;
+  z-index: 10;                /* fica acima das fotos de fundo */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--espaco-p) 64px 32px;
   text-transform: uppercase;
   color: var(--cor-texto-claro);
   font-family: var(--fonte-parceria);
   font-size: var(--tamanho-parceria);
   font-weight: bold;
-  text-shadow: 0 0 6px var(--cor-destaque); /* ajuda a ler a fonte fina */
+  text-shadow: 0 0 6px var(--cor-destaque);
+}
+
+/* ==========================================
+   PÁGINA INICIAL (index.html)
+   ========================================== */
+
+/* ---------- Hero: texto à esquerda, imagens à direita ---------- */
+.hero {
+  flex: 1;                    /* ocupa o espaço entre o menu e o rodapé */
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaco-g);
+  padding: 0 64px;
+}
+
+.hero__texto {
+  color: var(--cor-texto-claro);
+}
+
+  .hero__texto h1 {
+  font-size: min(180px, 30vh, 7vw);   
+  font-weight: normal;
+  line-height: 1.1;
+  }
+
+.hero__texto p {
+  margin-top: var(--espaco-m);
+  font-family: var(--fonte-corpo);
+  font-size: min(var(--tamanho-subtitulo), 3.6vh);
+  color: var(--cor-texto);
+}
+
+/* ---------- Conjunto colagem + dente ---------- */
+.hero__figura {
+  position: relative;
+  isolation: isolate;
+  flex-shrink: 0;
+  height: 80vh;               /* tamanho do conjunto: ajuste aqui */
+  aspect-ratio: 1.31 / 1;
+  max-width: 44vw;
+}
+
+
+/* Dente por cima, com sombra */
+.hero__imagem {
+  position: absolute;
+  left: 45%;
+  top: 55%;
+  height: 145%;               /* tamanho do dente em relação à colagem */
+  width: auto;
+  max-width: none;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 3vh 2.5vh rgba(16, 50, 88, 0.35));
 }
