@@ -1,9 +1,11 @@
 /* ==========================================
-   PAGES.CSS - estilos específicos de cada página
+   PAGES.CSS - estilos específicos das páginas
+   Índice: 1 Utilitários · 2 Estrutura · 3 Títulos
+           4 Menu (página atual) · 5 Componentes
+           6 Integrantes · 7 FAQ · 8 Contato
    ========================================== */
 
-/* ---------- Página de integrantes ---------- */
-
+/* ---------- 1. Utilitários ---------- */
 /* Título só para leitores de tela (mantém o h1 semântico sem aparecer) */
 .visualmente-oculto {
   position: absolute;
@@ -14,20 +16,139 @@
   white-space: nowrap;
 }
 
+/* ---------- 2. Estrutura das páginas internas ---------- */
 .conteudo {
   flex: 1;
   padding: var(--espaco-g) 64px;
 }
 
-.titulo-integrantes {
+.pagina,
+.faq {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.secao {
+  margin-top: var(--espaco-g);
+}
+
+.pagina__acao {
+  margin-top: var(--espaco-g);
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  color: #0d2c4c; /* Cor similar aos botões do menu */
+}
+
+/* ---------- 3. Títulos e introduções ---------- */
+/* Título padrão das páginas internas (Sobre, Contato, FAQ) */
+.pagina__titulo,
+.titulo-pagina {
+  text-align: center;
+  color: var(--cor-destaque);
+  font-size: 56px;            /* menor que os 90px da home */
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+/* Título da página de integrantes */
+.titulo-integrantes {
+  margin: 30px 0;
+  text-align: center;
+  color: var(--cor-destaque);
   font-size: 4rem;
   font-weight: bold;
 }
 
+.pagina__intro,
+.faq__intro {
+  max-width: 680px;
+  margin: var(--espaco-m) auto var(--espaco-g);
+  text-align: center;
+  font-size: var(--tamanho-subtitulo);
+  line-height: 1.4;
+}
+
+.pagina__intro a,
+.faq__intro a {
+  color: var(--cor-destaque);
+  font-weight: bold;
+}
+
+.faq__intro a:hover {
+  color: var(--cor-destaque-hover);
+}
+
+.secao__titulo {
+  margin-bottom: var(--espaco-m);
+  text-align: center;
+  color: var(--cor-destaque);
+  font-family: var(--fonte-subtitulo);
+  font-size: var(--tamanho-subtitulo);
+  font-weight: normal;
+}
+
+/* ---------- 4. Menu: página atual ---------- */
+/* Aceita aria-current="page" (recomendado) ou class="ativo" */
+.menu a[aria-current="page"],
+.menu a.ativo {
+  background-color: var(--cor-destaque-hover);
+}
+
+/* ---------- 5. Componentes reutilizáveis ---------- */
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--espaco-g);
+}
+
+.caixa {
+  padding: var(--espaco-m) var(--espaco-g);
+  background-color: var(--cor-destaque);
+  color: var(--cor-texto-claro);
+  border-radius: 24px;
+}
+
+.caixa__titulo {
+  margin-bottom: var(--espaco-p);
+  font-family: var(--fonte-subtitulo);
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 1.25;
+}
+
+.caixa__texto {
+  line-height: 1.6;
+}
+
+.caixa__texto + .botao {
+  margin-top: var(--espaco-m);
+}
+
+.botao {
+  display: inline-block;
+  padding: var(--espaco-p) var(--espaco-g);
+  border: 0;
+  background-color: var(--cor-destaque);
+  color: var(--cor-texto-claro);
+  font-family: var(--fonte-subtitulo);
+  font-size: 1.2rem;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: var(--border-radius-botao);
+}
+
+.botao:hover {
+  background-color: var(--cor-destaque-hover);
+}
+
+.botao--claro {
+  background-color: var(--cor-texto-claro);
+  color: var(--cor-destaque);
+}
+
+.botao--claro:hover {
+  background-color: #e6dcff;
+}
+
+/* ---------- 6. Página de integrantes ---------- */
 /* Lista vertical: um integrante embaixo do outro */
 .integrantes {
   display: flex;
@@ -39,9 +160,9 @@
 .integrante {
   display: grid;
   grid-template-columns: 200px minmax(280px, 440px) 200px 200px;
+  justify-content: center;
   align-items: center;
   gap: var(--espaco-g);
-  justify-content: center;
 }
 
 .integrante__foto {
@@ -88,107 +209,70 @@
   height: 168px;
 }
 
-.pagina {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.pagina__titulo {
-  text-align: center;
-  color: var(--cor-destaque);
-  font-weight: normal;
-  line-height: 1.1;
-}
-
-.pagina__intro {
-  max-width: 680px;
-  margin: var(--espaco-m) auto var(--espaco-g);
-  text-align: center;
-  font-size: var(--tamanho-subtitulo);
-  line-height: 1.4;
-}
-
-.pagina__intro a {
-  color: var(--cor-destaque);
-}
-
-.pagina__acao {
-  margin-top: var(--espaco-g);
+/* ---------- 7. FAQ ---------- */
+.faq__cabecalho {
   text-align: center;
 }
 
-.secao {
-  margin-top: var(--espaco-g);
+/* Lista de perguntas: um cartão por pergunta, com espaço entre eles */
+.faq__lista {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-m);
 }
 
-.secao__titulo {
-  margin-bottom: var(--espaco-m);
-  text-align: center;
-  color: var(--cor-destaque);
-  font-family: var(--fonte-subtitulo);
-  font-size: var(--tamanho-subtitulo);
-  font-weight: normal;
-}
-
-.grade {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--espaco-g);
-}
-
-.caixa {
+.faq__item {
+  overflow: hidden;           /* mantém os cantos arredondados no hover */
   background-color: var(--cor-destaque);
   color: var(--cor-texto-claro);
-  border-radius: 24px;
-  padding: var(--espaco-m) var(--espaco-g);
-}
-
-.caixa__titulo {
-  margin-bottom: var(--espaco-p);
-  font-family: var(--fonte-subtitulo);
-  font-size: 1.4rem;
-  font-weight: normal;
-  line-height: 1.25;
-}
-
-.caixa__texto {
-  line-height: 1.6;
-}
-
-
-.caixa__texto + .botao {
-  margin-top: var(--espaco-m);
-}
-
-.botao {
-  display: inline-block;
-  border: 0;
-  cursor: pointer;
-  padding: var(--espaco-p) var(--espaco-g);
-  background-color: var(--cor-destaque);
-  color: var(--cor-texto-claro);
-  font-family: var(--fonte-subtitulo);
-  font-size: 1.2rem;
-  text-decoration: none;
   border-radius: var(--border-radius-botao);
 }
 
-.botao:hover {
+/* Pergunta (parte clicável) */
+.faq__item summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--espaco-m);
+  padding: var(--espaco-m) var(--espaco-g);
+  font-family: var(--fonte-subtitulo);
+  font-size: 24px;
+  cursor: pointer;
+  list-style: none;           /* tira a setinha padrão */
+}
+
+.faq__item summary::-webkit-details-marker {
+  display: none;              /* tira a setinha no Chrome/Safari */
+}
+
+.faq__item summary::after {
+  content: "+";
+  font-size: 32px;
+  line-height: 1;
+}
+
+.faq__item[open] summary::after {
+  content: "−";
+}
+
+.faq__item summary:hover {
   background-color: var(--cor-destaque-hover);
 }
 
-.botao--claro {
-  background-color: var(--cor-texto-claro);
-  color: var(--cor-destaque);
+.faq__item summary:focus-visible {
+  outline: 3px solid var(--cor-texto-claro);
+  outline-offset: -3px;
 }
 
-.botao--claro:hover {
-  background-color: #e6dcff;
+/* Resposta */
+.faq__item p {
+  padding: 0 var(--espaco-g) var(--espaco-m);
+  font-size: 20px;
+  line-height: 1.5;
 }
 
-.menu a[aria-current="page"] {
-  background-color: var(--cor-destaque-hover);
-}.contato {
+/* ---------- 8. Contato ---------- */
+.contato {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
   gap: var(--espaco-g);
@@ -268,4 +352,3 @@
 .redes a:hover {
   background-color: #e6dcff;
 }
-

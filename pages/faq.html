@@ -8,66 +8,70 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
     <!-- Título padronizado com o nome do projeto e da página -->
-    <title>TdB Connect | Dúvidas</title> 
-    
+    <title>TdB Connect | Dúvidas</title>
+
     <!-- Arquivos CSS (Subindo um nível com ../) -->
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/variaveis.css">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/pages.css">
   </head>
- <body>
+  <body>
+    <header class="header">
       <nav class="menu" aria-label="Navegação principal">
-       <ul>
-         <li><a href="../index.html">Início</a></li>
-         <li><a href="integrantes.html">Integrantes</a></li>
-         <li><a href="sobre.html">Sobre</a></li>
-         <li><a href="contato.html">Contato</a></li>
-       </ul>
-     </nav>
+        <ul>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="integrantes.html">Integrantes</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
     </header>
+
     <main class="conteudo">
       <div class="pagina">
-       <h1 class="pagina__titulo">Dúvidas frequentes</h1>
-       <p class="pagina__intro">Respostas rápidas para doadores, parceiros e voluntários. Não achou o que procurava? <a href="contato.html">Fale com a gente</a>.</p>
+        <h1 class="pagina__titulo">Dúvidas frequentes</h1>
+        <p class="pagina__intro">Respostas rápidas para doadores, parceiros e voluntários. Não achou o que procurava? <a href="contato.html">Fale com a gente</a>.</p>
 
-       <div class="faq">
+        <!-- Cada pergunta é um cartão, igual ao da página Sobre -->
+        <div class="faq__lista">
           <article class="caixa">
-            <h3 class="caixa__titulo">Como posso realizar uma doação para a Turma do Bem?</h3>
+            <h2 class="caixa__titulo">Como posso realizar uma doação para a Turma do Bem?</h2>
             <p class="caixa__texto">Você pode doar pelos canais oficiais da Turma do Bem, com valores únicos ou recorrentes. Toda contribuição ajuda a manter os tratamentos odontológicos gratuitos para jovens em vulnerabilidade social. Consulte a página de contato para receber o passo a passo.</p>
           </article>
           <article class="caixa">
-            <h3 class="caixa__titulo">Como funciona a doação via Nota Fiscal Paulista?</h3>
+            <h2 class="caixa__titulo">Como funciona a doação via Nota Fiscal Paulista?</h2>
             <p class="caixa__texto">Ao pedir CPF na nota em compras no estado de São Paulo, você pode direcionar os créditos para uma entidade participante do programa. O valor não sai do seu bolso: vem dos tributos já pagos na compra. Para conferir como indicar a Turma do Bem, consulte o portal oficial da Nota Fiscal Paulista.</p>
           </article>
           <article class="caixa">
-            <h3 class="caixa__titulo">Sou dentista/profissional de saúde, como posso me tornar um voluntário?</h3>
+            <h2 class="caixa__titulo">Sou dentista/profissional de saúde, como posso me tornar um voluntário?</h2>
             <p class="caixa__texto">Entre em contato escolhendo o perfil "Voluntário" no formulário. Nossa equipe vai explicar as etapas de cadastro, os requisitos e como funciona o atendimento na rede.</p>
           </article>
           <article class="caixa">
-            <h3 class="caixa__titulo">Como a Calculadora de Impacto funciona?</h3>
+            <h2 class="caixa__titulo">Como a Calculadora de Impacto funciona?</h2>
             <p class="caixa__texto">Você informa um valor de contribuição e a calculadora estima o que ele pode representar em atendimentos e resultados para os jovens atendidos. É uma estimativa para ajudar você a visualizar o impacto da sua doação.</p>
           </article>
           <article class="caixa">
-            <h3 class="caixa__titulo">Como o TdB Connect garante a segurança dos meus dados (LGPD)?</h3>
+            <h2 class="caixa__titulo">Como o TdB Connect garante a segurança dos meus dados (LGPD)?</h2>
             <p class="caixa__texto">Seguimos a Lei Geral de Proteção de Dados: coletamos apenas o necessário, usamos os dados para as finalidades informadas e protegemos o acesso às informações. Você pode solicitar acesso, correção ou exclusão dos seus dados a qualquer momento pelo nosso contato.</p>
           </article>
           <article class="caixa">
-            <h3 class="caixa__titulo">Quem pode ser beneficiado pelos projetos da Turma do Bem?</h3>
+            <h2 class="caixa__titulo">Quem pode ser beneficiado pelos projetos da Turma do Bem?</h2>
             <p class="caixa__texto">Os projetos atendem jovens em situação de vulnerabilidade social, que recebem tratamento odontológico gratuito de dentistas voluntários da rede. Os critérios de participação são definidos pela Turma do Bem.</p>
           </article>
-       </div>
+        </div>
 
-       <section class="caixa faq__assistente">
-         <h3 class="caixa__titulo">Prefere conversar agora?</h3>
-         <p class="caixa__texto">O Assistente Virtual responde dúvidas a qualquer hora.</p>
-         <a class="botao botao--claro" href="../index.html#chatbot">Falar com o Assistente</a>
-       </section>
-     </div>
-   </main>
-     <footer class="footer">
-       <p>© 2026 TdB Connect - Todos os direitos reservados</p>
-       <p>FIAP - TURMA DO BEM</p>
-     </footer>  
- </body>
+        <section class="caixa pagina__acao">
+          <h2 class="caixa__titulo">Prefere conversar agora?</h2>
+          <p class="caixa__texto">O Assistente Virtual responde dúvidas a qualquer hora.</p>
+          <a class="botao botao--claro" href="../index.html#chatbot">Falar com o Assistente</a>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 TdB Connect - Todos os direitos reservados</p>
+      <p>FIAP - TURMA DO BEM</p>
+    </footer>
+  </body>
 </html>
