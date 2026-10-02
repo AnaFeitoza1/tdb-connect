@@ -7,7 +7,7 @@
 /* ---------- Fontes locais (@font-face) ---------- */
 @font-face {
   font-family: 'Glacial Indifference';
-  src: url('../fonts/GlacialIndifference-Regular.otf') format('opentype');
+  src: url('../assets/fonts/GlacialIndifference-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -15,7 +15,7 @@
 
 @font-face {
   font-family: 'Lovelo Line';
-  src: url('../fonts/Lovelo-Line-Light-300.otf') format('opentype');
+  src: url('../assets/fonts/Lovelo-Line-Light-300.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
