@@ -72,11 +72,11 @@ Não é necessário instalar nada nem rodar servidor.
  
 | Foto | Nome | RM | Turma | LinkedIn | GitHub |
 |---|---|---|---|---|---|
-| <img src="assets/img/int.ana/foto.ana.jpeg" width="80" alt="Foto de Ana"> | Ana PREENCHER | PREENCHER | PREENCHER | [LinkedIn](https://www.linkedin.com/in/ana-feitoza-3460252b3) | [GitHub](https://github.com/AnaFeitoza1) |
-| <img src="assets/img/int.bruna/foto.bruna.jpeg" width="80" alt="Foto de Bruna"> | Bruna PREENCHER | PREENCHER | PREENCHER | [LinkedIn](PREENCHER) | [GitHub](PREENCHER) |
-| <img src="assets/img/int.bruno/foto.bruno.jpeg" width="80" alt="Foto de Bruno"> | Bruno PREENCHER | PREENCHER | PREENCHER | [LinkedIn](PREENCHER) | [GitHub](PREENCHER) |
-| <img src="assets/img/int.rafael/foto.rafael.jpeg" width="80" alt="Foto de Rafael"> | Rafael PREENCHER | PREENCHER | PREENCHER | [LinkedIn](PREENCHER) | [GitHub](PREENCHER) |
-| <img src="assets/img/int.yohan/foto.yohan.jpeg" width="80" alt="Foto de Yohan"> | Yohan PREENCHER | PREENCHER | PREENCHER | [LinkedIn](PREENCHER) | [GitHub](PREENCHER) |
+| <img src="assets/img/int.ana/foto.ana.jpeg" width="80" alt="Foto de Ana"> | Ana Feitoza | 574706 | 1TDSPB | [LinkedIn](https://www.linkedin.com/in/ana-feitoza-3460252b3) | [GitHub](https://github.com/AnaFeitoza1) |
+| <img src="assets/img/int.bruna/foto.bruna.jpeg" width="80" alt="Foto de Bruna"> | Bruna Stagliano | PREENCHER | 1TDSPB | [LinkedIn](PREENCHER) | [GitHub](PREENCHER) |
+| <img src="assets/img/int.bruno/foto.bruno.jpeg" width="80" alt="Foto de Bruno"> | Bruno Ardenghi | PREENCHER | 1TDSPB | [LinkedIn](PREENCHER) | [GitHub](PREENCHER) |
+| <img src="assets/img/int.rafael/foto.rafael.jpeg" width="80" alt="Foto de Rafael"> | Rafael Cadena |  | 1TDSPB | [LinkedIn](PREENCHER) | [GitHub](PREENCHER) |
+| <img src="assets/img/int.yohan/foto.yohan.jpeg" width="80" alt="Foto de Yohan"> | Yohan Martins | PREENCHER | 1TDSPB | [LinkedIn](PREENCHER) | [GitHub](PREENCHER) |
 
 ## 7. Repositório
  
